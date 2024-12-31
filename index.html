@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/photon.css">
+
+  <style>
+    .winodw-content{
+      height: 225px;
+    }
+  </style>
+
+</head>
+<body>
+  <header class="toolbar toolbar-header">
+    <h1 class="title">Header with actions</h1>
+    <div class="toolbar-actions">
+      <div class="btn-group">
+        <button class="btn btn-default">
+          <span class="icon icon-to-start"></span>
+        </button>
+        <button class="btn btn-default active" id="play-button" >
+          <span class="icon icon-play"></span>
+        </button>
+        <button class="btn btn-default">
+          <span class="icon icon-to-end"></span>
+        </button>
+      </div>
+
+      <span style="margin-left:40px" >
+        <span id="time-left">00:00</span> | <span id="total-time">00:00</span>
+      </span>
+  
+      <button class="btn btn-default btn-large pull-right" onclick="chooseMusic()" >
+        <span class="icon icon-plus icon-text">Add</span>
+      </button>
+    </div>
+  </header>
+  
+  <div class="winodw-content" >
+    <input type="file" style="display: none;" multiple onchange="musicSelected()" >
+    <audio src=""></audio>
+    <div class="padding-more">
+      <h4></h4>
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Artist</th>
+              <th>Duration</th>
+            </tr>
+          </thead>
+
+          <tbody id="table-body">
+            <!-- here dynamic data will shown -->
+            <!-- <tr>
+              <td>Fix You</td>
+              <td>ColdPlay</td>
+              <td>3:20</td>
+            </tr> -->
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="toolbar toolbar-footer">
+    <div class="toolbar-actions">
+      <button class="btn btn-default">
+        Cancel
+      </button>
+  
+      <button class="btn btn-primary pull-right">
+        Save
+      </button>
+    </div>
+  </footer>
+
+  <script src="./index.js" ></script>
+
+</body>
+</html>
